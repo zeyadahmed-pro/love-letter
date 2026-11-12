@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf0">
+  <meta name="description" content="A little love letter for Victoria, made with all my heart.">
+  <title>For Victoria, with love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="intro" id="intro" aria-label="A surprise for Vicky">
+    <div class="intro-card">
+      <p class="intro-kicker">a little surprise, made with love</p>
+      <h2 class="intro-title">For my <span>Vicky</span></h2>
+      <p class="intro-copy">A little piece of my heart, just for you.<br>Drag back and release—or tap to send the arrow.</p>
+      <div class="shooting-stage" id="shooting-stage" aria-label="Drag back on the bow to feel the breeze and shoot Cupid's arrow">
+        <span class="wind-ribbon wind-ribbon-one"></span>
+        <span class="wind-ribbon wind-ribbon-two"></span>
+        <span class="wind-ribbon wind-ribbon-three"></span>
+        <svg class="bow" viewBox="0 0 90 150">
+          <path class="bow-curve" d="M75 8 C12 26 12 124 75 142"/>
+          <path class="bow-string" d="M75 8 L75 142"/>
+        </svg>
+        <svg class="arrow" viewBox="0 0 210 36">
+          <path class="arrow-glow" d="M7 18 H194"/>
+          <path class="arrow-shaft" d="M7 18 H194"/>
+          <path class="arrow-head" d="M208 18 L187 7 L192 18 L187 29 Z"/>
+          <path class="arrow-feather" d="M14 18 L2 7 L5 18 L2 29 Z"/>
+        </svg>
+        <span class="heart-aura" aria-hidden="true"></span>
+        <span class="heart-orbit heart-orbit-one" aria-hidden="true"><i>♡</i></span>
+        <span class="heart-orbit heart-orbit-two" aria-hidden="true"><i>✦</i></span>
+        <span class="heart-sparkle heart-sparkle-one" aria-hidden="true">✧</span>
+        <span class="heart-sparkle heart-sparkle-two" aria-hidden="true">✦</span>
+        <span class="heart-sparkle heart-sparkle-three" aria-hidden="true">·</span>
+        <svg class="heart-target" viewBox="0 0 120 112">
+          <defs>
+            <clipPath id="heart-left-clip"><rect x="0" y="0" width="60" height="112"/></clipPath>
+            <clipPath id="heart-right-clip"><rect x="60" y="0" width="60" height="112"/></clipPath>
+            <linearGradient id="heart-gloss" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffb5c8"/>
+              <stop offset="52%" stop-color="#f58cab"/>
+              <stop offset="100%" stop-color="#df6489"/>
+            </linearGradient>
+          </defs>
+          <g class="heart-half heart-left" clip-path="url(#heart-left-clip)">
+            <path class="heart-fill" fill="url(#heart-gloss)" d="M60 106 11 59C-14 34 8 0 36 4c11 1 19 8 24 18C65 12 73 5 84 4c28-4 50 30 25 55z"/>
+            <path class="heart-shine" d="M26 21c-8 9-7 21 1 29" fill="none" stroke="#fff8f1" stroke-linecap="round" stroke-width="5"/>
+          </g>
+          <g class="heart-half heart-right" clip-path="url(#heart-right-clip)">
+            <path class="heart-fill" fill="url(#heart-gloss)" d="M60 106 11 59C-14 34 8 0 36 4c11 1 19 8 24 18C65 12 73 5 84 4c28-4 50 30 25 55z"/>
+          </g>
+          <path class="heart-crack" d="m60 25-7 13 9 10-8 12 9 11-7 13" fill="none" stroke="#fff8f1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+        </svg>
+        <span class="impact-flash"></span>
+      </div>
+      <button class="open-button" id="open" type="button">Send Cupid's arrow</button>
+      <p class="intro-footnote">your song starts quietly · tap the arrow to hear it</p>
+    </div>
+  </section>
+
+  <main class="page" id="page" aria-label="Our love story">
+    <span id="home" class="route-anchor" aria-hidden="true"></span>
+    <div class="ambient" aria-hidden="true">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+    </div>
+    <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+    <div class="heart-rain" id="heart-rain" aria-hidden="true"></div>
+    <div class="content" id="home-view">
+      <p class="eyebrow">to the girl who has my whole heart</p>
+      <h1>My Victoria<span>my Vicky</span></h1>
+      <p class="for-you">Every love song somehow sounds like you ♡</p>
+      <div class="heart-ornament" aria-hidden="true">♥</div>
+
+      <section class="letter" aria-label="A letter for Victoria">
+        <p class="letter-label">a note from my heart</p>
+        <p class="message">I miss you <em>every second in my life.</em><br>I love you soooo much and forever.<br>You have always been in my mind.</p>
+        <p class="signature">All my love, always<strong>your biggest admirer zyad ♡</strong></p>
+        <p class="promise">Wherever life takes us, you'll always have a home in my heart.</p>
+        <p class="promise romantic-note">If I could choose one place to be, it would be right beside you. Until then, every heartbeat is another little reminder that I love you, Vicky.</p>
+      </section>
+
+      <section class="player" id="player" data-playing="false" aria-label="Music player">
+        <button class="play-button" id="play" type="button" aria-label="Play A Thousand Years">▶</button>
+        <div class="track">
+          <span class="track-title">A Thousand Years</span>
+          <span class="track-artist">CHRISTINA PERRI · JUST FOR YOU</span>
+        </div>
+        <span class="sound" aria-hidden="true">♫</span>
+        <div class="progress-row">
+          <span id="current-time">0:00</span>
+          <input class="progress" id="progress" type="range" min="0" max="100" value="0" aria-label="Song position">
+          <span id="duration">0:00</span>
+        </div>
+        <p class="music-note" id="music-note" aria-live="polite">A song for my forever person. Press play to listen ♡</p>
+      </section>
+
+      <p class="footer">No matter the distance, <span>my heart is always with you.</span></p>
+      <button class="kiss-button" id="kiss" type="button">send a little love ♡</button>
+      <a class="journey-link" id="story-link" href="#our-story">
+        <span class="journey-icon" aria-hidden="true">✧</span>
+        <span class="journey-copy"><strong>There's more I want to tell you</strong><small>Our 49 days, and all the tomorrows ♡</small></span>
+        <span class="journey-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <section class="story-view" id="our-story" aria-labelledby="story-title">
+      <nav class="story-nav" aria-label="Story navigation">
+        <a class="back-link" id="home-link" href="#home">← Back to my letter</a>
+        <button class="story-music" id="story-play" type="button" aria-label="Pause A Thousand Years">
+          <span class="story-music-icon" aria-hidden="true">♫</span>
+          <span id="story-music-label">Your song is playing</span>
+          <span class="story-music-toggle" id="story-music-toggle" aria-hidden="true">Ⅱ</span>
+        </button>
+      </nav>
+
+      <header class="story-hero story-reveal">
+        <div class="orbit-heart" aria-hidden="true"><span>♥</span></div>
+        <p class="story-eyebrow">a little time capsule, made just for us</p>
+        <h2 id="story-title">49 Days <span>of Us</span></h2>
+        <p class="story-date">September 24 <i>✧</i> November 12</p>
+        <p class="story-intro">The world kept changing. The best thing in mine stayed the same: <em>you.</em></p>
+        <a class="discover-link" href="#our-moments">come wander through our story <span>↓</span></a>
+      </header>
+
+      <section class="story-stats" aria-label="Our time together">
+        <article class="stat-card story-reveal">
+          <span class="stat-number">49</span>
+          <span class="stat-caption">days of choosing us</span>
+          <span class="stat-decoration" aria-hidden="true">♡</span>
+        </article>
+        <article class="stat-card story-reveal">
+          <span class="stat-number">2</span>
+          <span class="stat-caption">hearts, always connected</span>
+          <span class="stat-decoration" aria-hidden="true">♡</span>
+        </article>
+        <article class="stat-card story-reveal">
+          <span class="stat-number">∞</span>
+          <span class="stat-caption">tomorrows I want with you</span>
+          <span class="stat-decoration" aria-hidden="true">♡</span>
+        </article>
+      </section>
+
+      <section class="moments-section" id="our-moments" aria-labelledby="moments-title">
+        <header class="section-heading story-reveal">
+          <p class="story-eyebrow">the world kept turning</p>
+          <h3 id="moments-title">And we kept <em>choosing each other.</em></h3>
+          <p>So many things changed out there. Here's a little snapshot of the world during our first 49 days.</p>
+        </header>
+        <div class="moments-timeline">
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">🪐</span>
+            <div><p class="moment-label">A little farther away</p><h4>The universe had more to tell</h4><p>Scientists made new discoveries about planets and black holes, reminding us how wonderfully vast the universe can be.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">🚀</span>
+            <div><p class="moment-label">A little farther ahead</p><h4>A new record on Mars</h4><p>NASA's Mars explorers pushed a driving record even farther across the red planet.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">🌙</span>
+            <div><p class="moment-label">A little closer to the Moon</p><h4>Something new among the stars</h4><p>A new lunar mineral made the Moon feel full of fresh mysteries waiting to be found.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">📱</span>
+            <div><p class="moment-label">New things in our hands</p><h4>Technology took another step</h4><p>The iPhone 18 arrived with new technology, and the world found even more ways to stay connected.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">🤖</span>
+            <div><p class="moment-label">The future kept unfolding</p><h4>AI grew a little smarter</h4><p>New ideas in artificial intelligence kept turning science fiction into something closer to everyday life.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">🚕</span>
+            <div><p class="moment-label">Dreams taking flight</p><h4>Flying cars felt closer</h4><p>The dream of flying cars kept moving toward reality, making tomorrow feel full of possibility.</p></div>
+          </article>
+          <article class="moment-card story-reveal">
+            <span class="moment-icon" aria-hidden="true">☀️</span>
+            <div><p class="moment-label">A little wonder above us</p><h4>The Sun kept its secrets</h4><p>Scientists spotted mysterious things happening on the Sun, a reminder that even our closest star can still surprise us.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="distance-note story-reveal">
+        <div class="distance-stars" aria-hidden="true">✦　·　♡　·　✦</div>
+        <p class="story-eyebrow">even from far away</p>
+        <h3>Miles apart.<br><em>Never far from my heart.</em></h3>
+        <p>Distance, time, and difficult days can stretch the miles between us, but they will never change what we have. In every quiet moment, every little good morning, every song that makes me think of you—I'm choosing you, again and again.</p>
+        <div class="distance-signature">right here, loving you <span>♥</span></div>
+      </section>
+
+      <section class="forever-card story-reveal">
+        <span class="forever-flower" aria-hidden="true">❀</span>
+        <p class="story-eyebrow">not just a chapter</p>
+        <h3>I want us to be<br><em>the whole story.</em></h3>
+        <p>Through every change, every challenge, every distance, and every tomorrow. I don't want to be just a chapter in your life—I want to write all the pages beside you.</p>
+        <p class="forever-promise">No matter what happens,<br><strong>it's you and me.</strong></p>
+        <div class="forever-days">Not just for 49 days. <span>For a lifetime.</span></div>
+        <div class="forever-confetti" aria-hidden="true"><i>♡</i><i>✧</i><i>♥</i><i>✦</i><i>♡</i></div>
+      </section>
+
+      <footer class="story-footer story-reveal">
+        <p>Thank you for being my favorite hello,<br>my sweetest thought, and my always.</p>
+        <h3>All my love, <em>Vicky.</em></h3>
+        <a class="back-to-top" href="#our-story">back to the beginning ↑</a>
+      </footer>
+    </section>
+    <audio id="song" preload="auto" autoplay muted playsinline loop>
+      <source src="Thouthand.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
